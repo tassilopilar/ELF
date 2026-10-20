@@ -422,9 +422,63 @@
   }
 
   .yt-btn {
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
+    gap: 32px;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 36px 40px;
+    border-radius: 8px;
+    background: linear-gradient(160deg, var(--ink) 0%, var(--ink-dark) 100%);
+    color: var(--terracotta-light);
+    box-shadow: 0 6px 20px rgba(60, 42, 34, 0.15);
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+
+  .yt-btn:hover {
+    box-shadow: 0 10px 28px rgba(60, 42, 34, 0.3);
+    transform: translateY(-2px);
+  }
+
+  .yt-icon {
+    width: 72px;
+    height: 72px;
+    flex-shrink: 0;
+  }
+
+  .yt-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1.1;
+  }
+
+  .yt-visit {
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .yt-name {
+    font-size: clamp(2rem, 6vw, 3rem);
+    color: #f2ede1;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 6px 0 10px;
+  }
+
+  .yt-sub {
+    font-family: Arial, sans-serif;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+  }
+
+  @media (max-width: 560px) {
+    .yt-btn { flex-direction: column; gap: 16px; padding: 28px 20px; }
+    .yt-icon { width: 56px; height: 56px; }
   }
 
   /* Contact */
@@ -600,9 +654,13 @@
       </a>
     </div>
     <div class="yt-cta">
-      <a class="btn btn-primary yt-btn" href="https://www.youtube.com/@HLI_Europe" target="_blank" rel="noopener noreferrer">
-        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
-        Visit HLI Europe on YouTube
+      <a class="yt-btn" href="https://www.youtube.com/@HLI_Europe" target="_blank" rel="noopener noreferrer">
+        <svg class="yt-icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
+        <span class="yt-text">
+          <span class="yt-visit">Visit</span>
+          <span class="yt-name">HLI Europe</span>
+          <span class="yt-sub">YouTube Channel</span>
+        </span>
       </a>
     </div>
   </div>
