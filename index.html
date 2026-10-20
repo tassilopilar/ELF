@@ -416,6 +416,27 @@
     line-height: 1.4;
   }
 
+  .yt-banner {
+    display: block;
+    max-width: 720px;
+    margin: 32px auto 0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(60, 42, 34, 0.15);
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+
+  .yt-banner:hover {
+    box-shadow: 0 10px 28px rgba(60, 42, 34, 0.25);
+    transform: translateY(-2px);
+  }
+
+  .yt-banner img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
   /* Contact */
   .contact {
     background: var(--cream);
@@ -588,6 +609,9 @@
         <h3>When Rights Forget the Human Face: Why the Family, Not the State, Is the Measure of Civilization</h3>
       </a>
     </div>
+    <a class="yt-banner" href="https://www.youtube.com/@HLI_Europe" target="_blank" rel="noopener noreferrer">
+      <img src="assets/hli-europe-youtube.webp" alt="Visit the HLI Europe YouTube channel" width="1280" height="720" loading="lazy">
+    </a>
   </div>
 </section>
 
